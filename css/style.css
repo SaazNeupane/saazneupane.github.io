@@ -3,6 +3,9 @@ body {
 	height: 100%;
 	font-family: 'Josefin Sans', sans-serif;
 }
+html {
+	scroll-behavior: smooth;
+  }
 
 h1,
 h2,
