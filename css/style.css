@@ -227,7 +227,7 @@ ol {
 	content: '';
 	width: 50%;
 	height: 2px;
-	left: 23%;
+	left: 14%;
 	top: 50%;
 	margin-top: 1px;
 	background: #cbcbcb;
@@ -246,6 +246,20 @@ ol {
 	margin-left: 60px;
 	padding-left: 110px;
 	border-left: 2px solid #40424a;
+}
+
+.exp-list .social-links a {
+	color: #484848;
+	font-size: 36px;
+	margin-right: 40px;
+}
+
+.exp-list .social-links {
+	margin-left: 25px;
+}
+.exp-list .row h3 {
+	padding-top: 7px;
+	padding-left: 14px;;
 }
 
 .exp-list li {
