@@ -1,10 +1,3 @@
-/* =================================
-------------------------------------
-	Civic - CV Resume
-	Version: 1.0
- ------------------------------------ 
- ====================================*/
-
 "use strict";
 
 $(window).on("load", function () {
@@ -79,64 +72,6 @@ $(window).on("load", function () {
     //Set progress circle 1
     $("#progress1").circleProgress({
       value: 0.65,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-    //Set progress circle 2
-    $("#progress2").circleProgress({
-      value: 0.75,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    //Set progress circle white
-    $("#progress3").circleProgress({
-      value: 0.7,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    //Set progress circle white
-    $("#progress4").circleProgress({
-      value: 0.5,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    $("#progress5").circleProgress({
-      value: 0.25,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    $("#progress6").circleProgress({
-      value: 0.81,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    $("#progress7").circleProgress({
-      value: 0.31,
-      size: 175,
-      thickness: 2,
-      fill: "#40424a",
-      emptyFill: "rgba(0, 0, 0, 0)",
-    });
-
-    $("#progress8").circleProgress({
-      value: 0.7,
       size: 175,
       thickness: 2,
       fill: "#40424a",
