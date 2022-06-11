@@ -45,6 +45,14 @@ $(window).on("load", function () {
     }
   });
 
+  $(document).on("scroll", function () {
+    var pixels = $(document).scrollTop();
+    var pageHeight = $(document).height() - $(window).height();
+    var progress = (100 * pixels) / pageHeight;
+
+    $("div.progress").css("width", progress + "%");
+  });
+
   $(".lan-prog").each(function () {
     var progress = $(this).data("lanprogesss");
     var ele = "<span></span>";

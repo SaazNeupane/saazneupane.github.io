@@ -637,6 +637,17 @@ ol {
 	}
 }
 
+/* Loader */
+.progress { 
+	z-index: 5; 
+	position: fixed; 
+	top: 0; 
+	left: 0;
+	height: 5px; 
+	background-color: #40424A; 
+	transition: all linear 0.1s  
+}
+
 
 
 /* Responsive */
