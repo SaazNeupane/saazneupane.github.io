@@ -1,1 +1,1 @@
-https://saazneupane.github.io/MyPortfolio/
+https://saazneupane.github.io/Portfolio/
