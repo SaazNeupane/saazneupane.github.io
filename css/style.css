@@ -288,8 +288,15 @@ ol {
 	margin-bottom: 10px;
 }
 
-.exp-list h4 {
+.exp-list h5 {
 	font-size: 16px;
+	color: #586161;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.exp-list h4 {
+	font-size: 13px;
 	text-transform: uppercase;
 	color: #808181;
 	margin-top: 10px;
