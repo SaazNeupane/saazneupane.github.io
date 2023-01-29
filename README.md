@@ -1,1 +1,1 @@
-Check out my portfolio: https://saazneupane.github.io/Portfolio/
+Check out my portfolio: https://saazneupane.github.io
