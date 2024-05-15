@@ -284,7 +284,12 @@ ol {
 }
 
 .exp-list h2 {
-	font-size: 72px;
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+.exp-list h3 {
+	font-size: 25px;
 	margin-bottom: 10px;
 }
 
@@ -296,7 +301,7 @@ ol {
 }
 
 .exp-list h4 {
-	font-size: 13px;
+	font-size: 14px;
 	text-transform: uppercase;
 	color: #808181;
 	margin-top: 10px;
