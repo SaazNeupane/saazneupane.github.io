@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Saaz Neupane — Data Analyst & Full-Stack Developer</title>
+    <title>Saaz Neupane | Data Analyst & Full-Stack Developer</title>
 
-    <meta name="description" content="Saaz Neupane — Data Analyst and Full-Stack Developer based in Mississauga, Canada. Skilled in Python, Power BI, React, Node.js, and Android development." />
+    <meta name="description" content="Saaz Neupane, Data Analyst and Full-Stack Developer based in Mississauga, Canada. Skilled in Python, Power BI, React, Node.js, and Android development." />
 
-    <meta property="og:title"       content="Saaz Neupane — Portfolio" />
+    <meta property="og:title"       content="Saaz Neupane | Portfolio" />
     <meta property="og:description" content="Data Analyst and Full-Stack Developer based in Mississauga, Canada." />
     <meta property="og:image"       content="img/profile.jpg" />
     <meta property="og:type"        content="website" />
 
     <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content="Saaz Neupane — Portfolio" />
+    <meta name="twitter:title"       content="Saaz Neupane | Portfolio" />
     <meta name="twitter:description" content="Data Analyst and Full-Stack Developer based in Mississauga, Canada." />
     <meta name="twitter:image"       content="img/profile.jpg" />
 
@@ -21,7 +21,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/a3976c878f.js" crossorigin="anonymous" defer></script>
 
@@ -36,16 +36,17 @@
 
     <nav class="site-nav" role="navigation" aria-label="Main navigation">
       <div class="nav-inner">
-        <a href="#hero" class="nav-logo" aria-label="Saaz Neupane — home">
+        <a href="#hero" class="nav-logo" aria-label="Saaz Neupane, home">
           <img src="img/logo.png" alt="Saaz Neupane logo" height="36" />
         </a>
 
         <div class="nav-links" role="list">
-          <a href="#projects"   role="listitem">Projects</a>
-          <a href="#experience" role="listitem">Experience</a>
-          <a href="#skills"     role="listitem">Skills</a>
-          <a href="#education"  role="listitem">Education</a>
-          <a href="#contact"    role="listitem">Contact</a>
+          <a href="#projects"   role="listitem" data-index="01">Projects</a>
+          <a href="#experience" role="listitem" data-index="02">Experience</a>
+          <a href="#skills"     role="listitem" data-index="03">Skills</a>
+          <a href="#education"  role="listitem" data-index="04">Education</a>
+          <a href="#references" role="listitem" data-index="05">References</a>
+          <a href="#contact"    role="listitem" data-index="06">Contact</a>
         </div>
 
         <div class="nav-actions">
@@ -67,6 +68,7 @@
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
+      <a href="#references">References</a>
       <a href="#contact">Contact</a>
     </div>
 
@@ -77,6 +79,21 @@
             <span class="label">Based in Mississauga, Canada</span>
             <h1 class="hero-name">Saaz<br />Neupane</h1>
             <p class="hero-tagline">Data Analyst &amp; Full-Stack Developer. I turn raw data into decisions and ship products people use.</p>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-num">08</span>
+                <span class="stat-label">Projects shipped</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">06</span>
+                <span class="stat-label">Skill domains</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">07</span>
+                <span class="stat-label">Largest team led</span>
+              </div>
+            </div>
 
             <div class="hero-info">
               <ul>
@@ -110,13 +127,17 @@
 
       <section id="projects" class="projects section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">01</span>
+            <span class="panel-meta">4 repos</span>
+          </div>
           <div class="section-title">
             <span class="label">Work</span>
             <h2>Projects</h2>
           </div>
 
           <div class="projects-grid">
-            <a href="https://github.com/SaazNeupane/PokeDex" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="PokeDex — GitHub">
+            <a href="https://github.com/SaazNeupane/PokeDex" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="PokeDex on GitHub">
               <div class="project-img">
                 <div class="set-bg port-pic" data-setbg="img/project/pokedex.png"></div>
                 <div class="project-overlay">
@@ -135,7 +156,7 @@
               </div>
             </a>
 
-            <a href="https://github.com/SaazNeupane/KeepNotes" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Keep Notes — GitHub">
+            <a href="https://github.com/SaazNeupane/KeepNotes" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Keep Notes on GitHub">
               <div class="project-img">
                 <div class="set-bg port-pic" data-setbg="img/project/keep_notes.jpg"></div>
                 <div class="project-overlay">
@@ -152,7 +173,7 @@
               </div>
             </a>
 
-            <a href="https://github.com/SaazNeupane/Matcher" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Matcher — GitHub">
+            <a href="https://github.com/SaazNeupane/Matcher" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Matcher on GitHub">
               <div class="project-img">
                 <div class="set-bg port-pic" data-setbg="img/project/matcher.png"></div>
                 <div class="project-overlay">
@@ -168,7 +189,7 @@
               </div>
             </a>
 
-            <a href="https://github.com/SaazNeupane/MangaGeekProject" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="MangaGeek — GitHub">
+            <a href="https://github.com/SaazNeupane/MangaGeekProject" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="MangaGeek on GitHub">
               <div class="project-img">
                 <div class="set-bg port-pic" data-setbg="img/project/mangageek.jpg"></div>
                 <div class="project-overlay">
@@ -181,7 +202,7 @@
               </div>
               <div class="project-info">
                 <h3>MangaGeek <i class="fa-brands fa-github project-gh-icon" aria-hidden="true"></i></h3>
-                <p>Django web app for manga discovery — led 4-person team.</p>
+                <p>Django web app for manga discovery. Led a 4-person team.</p>
               </div>
             </a>
           </div>
@@ -190,6 +211,10 @@
 
       <section id="experience" class="experience section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">02</span>
+            <span class="panel-meta">4 highlights</span>
+          </div>
           <div class="section-title">
             <span class="label">Background</span>
             <h2>Experience</h2>
@@ -200,7 +225,7 @@
               <span class="exp-col-label">Work</span>
               <div class="timeline">
                 <div class="timeline-item">
-                  <span class="timeline-date">Nov 2021 – Aug 2022 · Dec 2022 – Apr 2023</span>
+                  <span class="timeline-date">Nov 2021 to Aug 2022 · Dec 2022 to Apr 2023</span>
                   <h3>Junior Data Analyst</h3>
                   <h4>Syvar Technology</h4>
                 </div>
@@ -212,7 +237,7 @@
               <div class="project-list">
                 <div class="project-list-item">
                   <div class="project-list-header">
-                    <h3>Chukul — Trading App</h3>
+                    <h3>Chukul: Trading App</h3>
                     <a href="https://play.google.com/store/apps/details?id=com.pitech.portfoliotracker" target="_blank" rel="noopener noreferrer" class="ext-link" aria-label="Chukul on Google Play">
                       <i class="fa-brands fa-google-play" aria-hidden="true"></i>
                     </a>
@@ -251,7 +276,7 @@
                     </a>
                   </div>
                   <span class="role-tag">React · Solo</span>
-                  <p>Rental listing platform — end-to-end, design through deployment.</p>
+                  <p>Rental listing platform, from design through deployment.</p>
                 </div>
               </div>
             </div>
@@ -261,6 +286,10 @@
 
       <section id="skills" class="skills section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">03</span>
+            <span class="panel-meta">6 categories</span>
+          </div>
           <div class="section-title">
             <span class="label">Toolkit</span>
             <h2>Skills</h2>
@@ -328,6 +357,10 @@
 
       <section id="education" class="education section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">04</span>
+            <span class="panel-meta">4 entries</span>
+          </div>
           <div class="section-title">
             <span class="label">Academic</span>
             <h2>Education</h2>
@@ -337,14 +370,14 @@
             <div class="edu-item">
               <span class="edu-year">2024</span>
               <div>
-                <h3>Post Graduate Diploma — Big Data Analytics</h3>
+                <h3>Post Graduate Diploma in Big Data Analytics</h3>
                 <h4>Lambton College, Mississauga</h4>
               </div>
             </div>
             <div class="edu-item">
               <span class="edu-year">2022</span>
               <div>
-                <h3>Bachelor's Degree — Computer Science</h3>
+                <h3>Bachelor's Degree in Computer Science</h3>
                 <h4>Coventry University</h4>
                 <p>Thesis: Research on web-based solutions for improving quality of service for tenants and landlords in Nepal.</p>
               </div>
@@ -369,6 +402,10 @@
 
       <section id="references" class="references section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">05</span>
+            <span class="panel-meta">4 quotes</span>
+          </div>
           <div class="section-title">
             <span class="label">Testimonials</span>
             <h2>References</h2>
@@ -377,7 +414,7 @@
           <div class="refrence-slider owl-carousel">
             <div class="single-refrence">
               <span class="qut">"</span>
-              <p>Saaz has tremendous potential — vocal about his software ideas, but respects his superiors and enthusiastically tackles every assignment. Friendly, easy to get along with, respected by his co-workers.</p>
+              <p>Saaz has tremendous potential: vocal about his software ideas, but respects his superiors and enthusiastically tackles every assignment. Friendly, easy to get along with, respected by his co-workers.</p>
               <h3>Bimod Dev Panta</h3>
               <h4>Owner, Pi Tech Limited</h4>
             </div>
@@ -395,7 +432,7 @@
             </div>
             <div class="single-refrence">
               <span class="qut">"</span>
-              <p>Saaz is one of the most valuable people I have ever met — smart, professional, experienced, deadline-oriented. Highly recommended.</p>
+              <p>Saaz is one of the most valuable people I have ever met: smart, professional, experienced, deadline-oriented. Highly recommended.</p>
               <h3>Shirshak Sitaula</h3>
               <h4>CEO, Syvar Technology</h4>
             </div>
@@ -405,6 +442,10 @@
 
       <section id="contact" class="contact section-pad">
         <div class="section-inner">
+          <div class="panel-header">
+            <span class="panel-index">06</span>
+            <span class="panel-meta">2 channels</span>
+          </div>
           <div class="section-title">
             <span class="label">Get in touch</span>
             <h2>Contact</h2>

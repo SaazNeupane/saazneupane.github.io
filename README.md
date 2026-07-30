@@ -1,6 +1,6 @@
 # saazneupane.github.io
 
-Personal portfolio website for Saaz Neupane — Data Analyst & Full-Stack Developer.
+Personal portfolio website for Saaz Neupane, Data Analyst & Full-Stack Developer.
 
 **Live:** [saazneupane.com.np](https://saazneupane.com.np)
 
@@ -10,7 +10,7 @@ Personal portfolio website for Saaz Neupane — Data Analyst & Full-Stack Develo
 - Vanilla JavaScript (no framework)
 - jQuery + Owl Carousel (references slider)
 - Font Awesome (icons)
-- Google Fonts — Josefin Sans
+- Google Fonts (Josefin Sans)
 
 ## Features
 
