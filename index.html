@@ -1,193 +1,336 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#060d09" />
     <title>Saaz Neupane | Data Analyst & Full-Stack Developer</title>
 
-    <meta name="description" content="Saaz Neupane, Data Analyst and Full-Stack Developer based in Mississauga, Canada. Skilled in Python, Power BI, React, Node.js, and Android development." />
+    <meta name="description" content="Saaz Neupane, Data Analyst and Full-Stack Developer in Mississauga, Canada. Works with Python, Power BI, React, Node.js and Android." />
+    <link rel="canonical" href="https://saazneupane.com.np/" />
 
-    <meta property="og:title"       content="Saaz Neupane | Portfolio" />
-    <meta property="og:description" content="Data Analyst and Full-Stack Developer based in Mississauga, Canada." />
-    <meta property="og:image"       content="img/profile.jpg" />
+    <meta property="og:title"       content="Saaz Neupane | Data Analyst & Full-Stack Developer" />
+    <meta property="og:description" content="Data Analyst and Full-Stack Developer in Mississauga, Canada." />
+    <meta property="og:image"       content="https://saazneupane.com.np/img/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:url"         content="https://saazneupane.com.np/" />
     <meta property="og:type"        content="website" />
 
     <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content="Saaz Neupane | Portfolio" />
-    <meta name="twitter:description" content="Data Analyst and Full-Stack Developer based in Mississauga, Canada." />
-    <meta name="twitter:image"       content="img/profile.jpg" />
+    <meta name="twitter:title"       content="Saaz Neupane | Data Analyst & Full-Stack Developer" />
+    <meta name="twitter:description" content="Data Analyst and Full-Stack Developer in Mississauga, Canada." />
+    <meta name="twitter:image"       content="https://saazneupane.com.np/img/og.png" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/logo.png" />
+    <link rel="icon" type="image/png" href="img/logo-128.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&family=Unbounded:wght@500;700&display=swap" rel="stylesheet" />
 
     <script src="https://kit.fontawesome.com/a3976c878f.js" crossorigin="anonymous" defer></script>
 
-    <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Saaz Neupane",
+        "jobTitle": "Data Analyst & Full-Stack Developer",
+        "url": "https://saazneupane.com.np/",
+        "address": { "@type": "PostalAddress", "addressLocality": "Mississauga", "addressCountry": "CA" },
+        "sameAs": ["https://github.com/SaazNeupane", "https://www.linkedin.com/in/SaazNeupane/"]
+      }
+    </script>
+    <script>document.documentElement.classList.add("js");</script>
   </head>
 
   <body>
-    <div id="preloder" aria-hidden="true">
-      <div class="loader"></div>
-    </div>
+    <a href="#main" class="skip-link">Skip to content</a>
 
-    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <header class="site-nav" id="siteNav">
       <div class="nav-inner">
         <a href="#hero" class="nav-logo" aria-label="Saaz Neupane, home">
-          <img src="img/logo.png" alt="Saaz Neupane logo" height="36" />
+          <span>Saaz Neupane</span>
         </a>
 
-        <div class="nav-links" role="list">
-          <a href="#projects"   role="listitem" data-index="01">Projects</a>
-          <a href="#experience" role="listitem" data-index="02">Experience</a>
-          <a href="#skills"     role="listitem" data-index="03">Skills</a>
-          <a href="#education"  role="listitem" data-index="04">Education</a>
-          <a href="#references" role="listitem" data-index="05">References</a>
-          <a href="#contact"    role="listitem" data-index="06">Contact</a>
-        </div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#live">Apps</a>
+          <a href="#systems">Systems</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#education">Education</a>
+          <a href="#references">References</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
 
-        <div class="nav-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-            <i class="fa-solid fa-moon" aria-hidden="true"></i>
-          </button>
-          <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobile">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
       <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-    </nav>
+    </header>
 
-    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+    <nav class="nav-mobile" id="navMobile" aria-label="Mobile navigation" hidden>
+      <a href="#live">Apps</a>
+      <a href="#systems">Systems</a>
       <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#references">References</a>
       <a href="#contact">Contact</a>
-    </div>
+    </nav>
 
-    <main>
+    <main id="main">
       <section id="hero" class="hero">
+        <canvas id="dataCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <span class="hero-tip" id="heroTip" aria-hidden="true"></span>
         <div class="hero-inner">
           <div class="hero-content">
-            <span class="label">Based in Mississauga, Canada</span>
-            <h1 class="hero-name">Saaz<br />Neupane</h1>
-            <p class="hero-tagline">Data Analyst &amp; Full-Stack Developer. I turn raw data into decisions and ship products people use.</p>
-
-            <div class="hero-info">
-              <ul>
-                <li><span>Email</span>saazinmail@gmail.com</li>
-                <li><span>Phone</span>+1 (416) 857-4723</li>
-              </ul>
+            <div class="hero-where">
+              <img src="img/profile.webp" alt="Saaz Neupane" width="56" height="56" fetchpriority="high" />
+              <span>Mississauga, Canada</span>
             </div>
+            <h1 class="hero-name"><span>Saaz</span> <span>Neupane</span></h1>
+            <p class="hero-tagline">Data Analyst &amp; Full-Stack Developer</p>
 
             <div class="hero-ctas">
-              <a href="#contact" class="btn btn-primary">Hire me</a>
+              <a href="#contact" class="btn btn-primary">Hire me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
               <a href="file/SaazNeupaneResume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
                 <i class="fa-solid fa-download" aria-hidden="true"></i> Resume
               </a>
             </div>
 
-            <div class="hero-social">
-              <a href="https://github.com/SaazNeupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fa-brands fa-github" aria-hidden="true"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/SaazNeupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-              </a>
-            </div>
+            <ul class="hero-info">
+              <li><a href="mailto:saazinmail@gmail.com">saazinmail@gmail.com</a></li>
+              <li><a href="tel:+14168574723">+1 (416) 857-4723</a></li>
+              <li>
+                <a href="https://github.com/SaazNeupane" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <span aria-hidden="true">/</span>
+                <a href="https://www.linkedin.com/in/SaazNeupane/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      <div class="hero-foot">
+          <button type="button" class="reshuffle" id="reshuffle"><i class="fa-solid fa-shuffle" aria-hidden="true"></i> Shuffle the multiverse</button>
+          <span class="universe" id="universeLabel"></span>
+        </div>
+      </section>
 
-          <div class="hero-photo">
-            <img src="img/profile.jpg" alt="Saaz Neupane" width="360" height="460" />
+      <section id="live" class="systems section-pad">
+        <div class="section-inner">
+          <div class="section-title">
+            <h2>Deployed apps</h2>
+            <p>Two full-stack apps I built and put online.</p>
           </div>
+          <ol class="sys-list">
+            <li class="sys-row">
+              <span class="sys-n">01</span>
+              <div class="sys-main">
+                <h3>Job Pipeline Platform</h3>
+                <a class="live-link" href="https://jobs.saazneupane.com.np/" target="_blank" rel="noopener noreferrer">Visit the live app <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <p>A job-search tool that finds postings, tailors a resume and cover letter to each one, and tracks applications.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>It searches about a dozen job boards and applicant-tracking systems, filters postings against the user's resume, and writes a tailored resume and cover letter for each one.</li>
+                    <li>It is multi-tenant: each user has a login, credentials are stored encrypted, and sign-up needs an invite code. A daily GitHub Actions run handles the batch work.</li>
+                    <li>It runs on a free hosting tier with a Cloudflare failover worker. A tunnel to the home server, managed by systemd, handles the heavy parts.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>GitHub Actions</li><li>Cloudflare</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">02</span>
+              <div class="sys-main">
+                <h3>Chautari</h3>
+                <a class="live-link" href="https://www.chautari.co" target="_blank" rel="noopener noreferrer">Visit the live app (private preview) <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                <p>A trip planner for visitors to Nepal. You browse destinations, answer a short questionnaire and get day-by-day itineraries with budgets.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>Built with Next.js and Prisma on Postgres. It has email and Google sign-in, rate limiting, cached itineraries and PDF export for paid users.</li>
+                    <li>Itineraries come from a curated, sourced dataset of destinations, with notes on seasons, costs and altitude.</li>
+                    <li>Free accounts get one itinerary, and a one-time pass unlocks more. Image storage, error monitoring and cookie-free analytics are set up.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Next.js</li><li>TypeScript</li><li>PostgreSQL</li><li>Stripe</li></ul>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="systems" class="systems section-pad">
+        <div class="section-inner">
+          <div class="section-title">
+            <h2>Running on my home server</h2>
+            <p>Systems I build and run myself. The source is in private repos, so each one gets a short write-up instead of a link.</p>
+          </div>
+          <ol class="sys-list">
+            <li class="sys-row">
+              <span class="sys-n">01</span>
+              <div class="sys-main">
+                <h3>Home server platform</h3>
+                <p>One always-on machine running about two dozen self-hosted services, with local names, DNS, monitoring and scheduled deploys.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>It's a repurposed gaming laptop running Ubuntu Server, with a GPU for local AI models and a fixed LAN address. Tailscale handles remote access.</li>
+                    <li>Pi-hole is the network's DNS and DHCP server. A reverse proxy gives each service a local name, and a Cloudflare Tunnel exposes only the few apps that need to be public.</li>
+                    <li>Nextcloud syncs phone photos, Vaultwarden stores passwords, Samba shares files with Windows, and a Homepage dashboard links it all together.</li>
+                    <li>Uptime Kuma watches about twenty services and gets a heartbeat from every cron job, so a job that quietly stops raises an alert.</li>
+                    <li>Every project repo has a deploy cron that pulls from GitHub every five minutes. A watchdog alerts me if one of those cron lines disappears.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Docker</li><li>Pi-hole</li><li>Nginx Proxy Manager</li><li>Tailscale</li><li>systemd</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">02</span>
+              <div class="sys-main">
+                <h3>YouTube content pipelines</h3>
+                <p>Automated video production. A topic or source goes in, and a finished vertical or long-form video comes out and uploads on a schedule with no manual steps.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>Each pipeline runs end to end on a schedule. It picks a topic or source, writes the script or finds the best moments, adds voice, captions and footage, renders with FFmpeg and uploads through the YouTube API.</li>
+                    <li>A local language model writes the cheap first draft, then Claude polishes it, ranks options and writes titles, so most of the work costs nothing. One helper tries the cheaper provider first and falls back to the other.</li>
+                    <li>Clips only come from a verified permission list or public-domain material. New candidates are flagged for manual review instead of being added automatically.</li>
+                    <li>Every video passes a content-quality check before upload, and the description discloses AI use.</li>
+                    <li>A shared GPU lock keeps pipelines from colliding. Upload slots are claimed in a state file so two runs never publish at the same second. Every run sends a heartbeat, so a silent failure raises an alert.</li>
+                    <li>I tested several local models. Forcing JSON mode helped short calls and hurt long-form prose, so the code uses it only where it helps.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>Ollama</li><li>faster-whisper</li><li>FFmpeg</li><li>YouTube API</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">03</span>
+              <div class="sys-main">
+                <h3>Ops Chat</h3>
+                <p>A chat assistant and self-healing monitor for the server.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>You can ask it how the disk is doing or whether last night's pipeline ran. A local model calls tools for disk, containers, DNS stats, monitors, pipeline logs and incident history.</li>
+                    <li>A background monitor restarts containers that go down and guards against memory leaks. It also watches deploys, the tunnel, the GPU, disk space and cron lines.</li>
+                    <li>It emails a daily digest of incidents and each pipeline's last run, and flags any pipeline whose uploads suddenly drop to zero.</li>
+                    <li>Tools are plain Python functions with a schema, so adding one takes a few lines and a self-check.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>FastAPI</li><li>Ollama</li><li>Function calling</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">04</span>
+              <div class="sys-main">
+                <h3>YouTube Manager Agent</h3>
+                <p>Analytics and optimization for all of my YouTube channels.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>Phase one collects analytics daily, builds a profile of each channel's niche, and emails one plain-language weekly report.</li>
+                    <li>Phase two edits titles and tags on underperforming videos. It is limited per channel and per week, has a cooldown, and logs every change.</li>
+                    <li>Each edit is compared against untouched control videos. If the edited video does worse, it is rolled back automatically.</li>
+                    <li>Each channel can run fully automatic or require approval, and one token file per channel works as its on/off switch.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>YouTube APIs</li><li>Docker</li><li>LLM</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">05</span>
+              <div class="sys-main">
+                <h3>Finance tracker</h3>
+                <p>Personal finance automation. Bank alert emails become categorized transactions on a custom dashboard.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>A parser reads bank alert emails, pulls out the details with per-bank patterns, and posts them to a self-hosted Firefly III ledger.</li>
+                    <li>It de-duplicates by message ID, merges duplicate alerts for the same payment, and retries failures instead of dropping them.</li>
+                    <li>A custom dashboard shows spending and net worth, and tracks money owed and lent between friends.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>Firefly III</li><li>FastAPI</li><li>IMAP</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">06</span>
+              <div class="sys-main">
+                <h3>Sports analytics bots</h3>
+                <p>Two bots that model match outcomes and flag where bookmaker odds disagree with the model.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>Each is a four-container stack: ingestion, analysis, notification and a database.</li>
+                    <li>One covers football leagues with a heuristic edge model. The other covers esports with an ELO model.</li>
+                    <li>Odds come from public feeds, filtered to an allowlist of bookmakers. An integrity check sends a digest when the data looks wrong, and a dashboard shows predictions and results.</li>
+                    <li>They only analyze and alert. They never place anything.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>PostgreSQL</li><li>Docker</li><li>Scrapers</li></ul>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section id="projects" class="projects section-pad">
         <div class="section-inner">
-          <div class="panel-header">
-            <span class="panel-index">01</span>
-            <span class="panel-meta">4 repos</span>
+          <div class="section-title rail-head">
+            <div>
+              <h2>Earlier projects</h2>
+              <p>App and web projects, each linking to its code.</p>
+            </div>
+            <div class="rail-nav">
+              <button type="button" id="railPrev" aria-label="Previous project"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i></button>
+              <button type="button" id="railNext" aria-label="Next project"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
           </div>
-          <div class="section-title">
-            <span class="label">Work</span>
-            <h2>Projects</h2>
-          </div>
 
-          <div class="projects-grid">
-            <a href="https://github.com/SaazNeupane/PokeDex" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="PokeDex on GitHub">
-              <div class="project-img">
-                <div class="set-bg port-pic" data-setbg="img/project/pokedex.png"></div>
-                <div class="project-overlay">
-                  <div class="project-tags">
-                    <span class="tag">Android</span>
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">Jetpack Compose</span>
-                    <span class="tag">MVVM</span>
-                    <span class="tag">Hilt</span>
-                  </div>
-                </div>
-              </div>
+          <div class="projects-rail" id="projectsRail" tabindex="0" role="region" aria-label="Projects, scroll sideways">
+            <a href="https://github.com/SaazNeupane/MangaGeekProject" target="_blank" rel="noopener noreferrer" class="project-card">
+              <div class="project-img"><img src="img/project/mangageek.webp" alt="MangaGeek manga browser with genre sidebar and cover grid" width="1200" height="750" loading="lazy" /></div>
               <div class="project-info">
-                <h3>PokeDex <i class="fa-brands fa-github project-gh-icon" aria-hidden="true"></i></h3>
-                <p>Native Android app using Jetpack Compose + MVVM architecture.</p>
-              </div>
-            </a>
-
-            <a href="https://github.com/SaazNeupane/KeepNotes" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Keep Notes on GitHub">
-              <div class="project-img">
-                <div class="set-bg port-pic" data-setbg="img/project/keep_notes.jpg"></div>
-                <div class="project-overlay">
-                  <div class="project-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">Material UI</span>
-                    <span class="tag">JSON Server</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>Keep Notes <i class="fa-brands fa-github project-gh-icon" aria-hidden="true"></i></h3>
-                <p>Full-stack note-taking app with persistent CRUD operations.</p>
-              </div>
-            </a>
-
-            <a href="https://github.com/SaazNeupane/Matcher" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Matcher on GitHub">
-              <div class="project-img">
-                <div class="set-bg port-pic" data-setbg="img/project/matcher.png"></div>
-                <div class="project-overlay">
-                  <div class="project-tags">
-                    <span class="tag">React</span>
-                    <span class="tag">JavaScript</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>Matcher <i class="fa-brands fa-github project-gh-icon" aria-hidden="true"></i></h3>
-                <p>Card-flipping memory game with randomised deck and timer.</p>
-              </div>
-            </a>
-
-            <a href="https://github.com/SaazNeupane/MangaGeekProject" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="MangaGeek on GitHub">
-              <div class="project-img">
-                <div class="set-bg port-pic" data-setbg="img/project/mangageek.jpg"></div>
-                <div class="project-overlay">
-                  <div class="project-tags">
-                    <span class="tag">Django</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">PostgreSQL</span>
-                  </div>
-                </div>
-              </div>
-              <div class="project-info">
-                <h3>MangaGeek <i class="fa-brands fa-github project-gh-icon" aria-hidden="true"></i></h3>
+                <h3>MangaGeek <i class="fa-brands fa-github" aria-hidden="true"></i></h3>
                 <p>Django web app for manga discovery. Led a 4-person team.</p>
+                <ul class="project-tags"><li>Django</li><li>Python</li><li>PostgreSQL</li></ul>
+              </div>
+            </a>
+
+            <a href="https://github.com/SaazNeupane/PokeDex" target="_blank" rel="noopener noreferrer" class="project-card">
+              <div class="project-img"><img src="img/project/pokedex.webp" alt="PokeDex Android app screens" width="1200" height="864" loading="lazy" /></div>
+              <div class="project-info">
+                <h3>PokeDex <i class="fa-brands fa-github" aria-hidden="true"></i></h3>
+                <p>Native Android app built with Jetpack Compose and MVVM.</p>
+                <ul class="project-tags"><li>Kotlin</li><li>Jetpack Compose</li><li>MVVM</li><li>Hilt</li></ul>
+              </div>
+            </a>
+
+            <a href="https://github.com/SaazNeupane/KeepNotes" target="_blank" rel="noopener noreferrer" class="project-card">
+              <div class="project-img"><img src="img/project/keep_notes.webp" alt="Keep Notes app with note cards" width="1200" height="750" loading="lazy" /></div>
+              <div class="project-info">
+                <h3>Keep Notes <i class="fa-brands fa-github" aria-hidden="true"></i></h3>
+                <p>Full-stack note-taking app with persistent CRUD operations.</p>
+                <ul class="project-tags"><li>React</li><li>Material UI</li><li>JSON Server</li></ul>
+              </div>
+            </a>
+
+            <a href="https://github.com/SaazNeupane/Matcher" target="_blank" rel="noopener noreferrer" class="project-card">
+              <div class="project-img"><img src="img/project/matcher.webp" alt="Matcher card-flipping memory game board" width="1200" height="864" loading="lazy" /></div>
+              <div class="project-info">
+                <h3>Matcher <i class="fa-brands fa-github" aria-hidden="true"></i></h3>
+                <p>Card-flipping memory game with a randomized deck and a timer.</p>
+                <ul class="project-tags"><li>React</li><li>JavaScript</li></ul>
               </div>
             </a>
           </div>
@@ -271,203 +414,162 @@
 
       <section id="skills" class="skills section-pad">
         <div class="section-inner">
-          <div class="panel-header">
-            <span class="panel-index">03</span>
-            <span class="panel-meta">6 categories</span>
-          </div>
           <div class="section-title">
-            <span class="label">Toolkit</span>
-            <h2>Skills</h2>
+            <h2>Toolkit</h2>
           </div>
 
-          <div class="skills-grid">
-            <div class="skill-category">
-              <span class="skill-category-label">Data</span>
-              <div class="skill-tags">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Power BI</span>
-                <span class="skill-tag">PostgreSQL</span>
-                <span class="skill-tag">MongoDB</span>
-                <span class="skill-tag">Data Analysis</span>
-                <span class="skill-tag">Data Visualization</span>
-              </div>
+          <dl class="skills-list">
+            <div class="skill-row">
+              <dt>Data</dt>
+              <dd>Python, SQL (PostgreSQL), Power BI, MongoDB, Data Analysis, Data Visualization</dd>
             </div>
-            <div class="skill-category">
-              <span class="skill-category-label">Frontend</span>
-              <div class="skill-tags">
-                <span class="skill-tag">React</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">HTML / CSS</span>
-                <span class="skill-tag">Material UI</span>
-              </div>
+            <div class="skill-row">
+              <dt>AI &amp; automation</dt>
+              <dd>LLM APIs, Local models (Ollama), Function calling and agents, Speech-to-text (Whisper), FFmpeg, Automated content pipelines</dd>
             </div>
-            <div class="skill-category">
-              <span class="skill-category-label">Backend</span>
-              <div class="skill-tags">
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">Django</span>
-                <span class="skill-tag">REST APIs</span>
-                <span class="skill-tag">JWT Auth</span>
-              </div>
+            <div class="skill-row">
+              <dt>Frontend</dt>
+              <dd>React, Next.js, TypeScript, JavaScript, HTML / CSS, Tailwind CSS, Material UI</dd>
             </div>
-            <div class="skill-category">
-              <span class="skill-category-label">Mobile</span>
-              <div class="skill-tags">
-                <span class="skill-tag">Android (Kotlin)</span>
-                <span class="skill-tag">Jetpack Compose</span>
-                <span class="skill-tag">MVVM</span>
-                <span class="skill-tag">Hilt</span>
-                <span class="skill-tag">Coroutines</span>
-              </div>
+            <div class="skill-row">
+              <dt>Backend</dt>
+              <dd>FastAPI, Node.js, Django, REST APIs, JWT and OAuth, Prisma, Stripe</dd>
             </div>
-            <div class="skill-category">
-              <span class="skill-category-label">DevOps</span>
-              <div class="skill-tags">
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">GitHub Actions</span>
-              </div>
+            <div class="skill-row">
+              <dt>Infrastructure</dt>
+              <dd>Linux server administration, Docker, Cloudflare Tunnel, Nginx Proxy Manager, Pi-hole, Tailscale, systemd, cron, Uptime Kuma, Git, GitHub Actions</dd>
             </div>
-            <div class="skill-category">
-              <span class="skill-category-label">Design</span>
-              <div class="skill-tags">
-                <span class="skill-tag">Adobe Photoshop</span>
-                <span class="skill-tag">After Effects</span>
-                <span class="skill-tag">TradingView Charts</span>
-              </div>
+            <div class="skill-row">
+              <dt>Mobile</dt>
+              <dd>Android (Kotlin), Jetpack Compose, MVVM, Hilt, Coroutines</dd>
             </div>
-          </div>
+            <div class="skill-row">
+              <dt>Design</dt>
+              <dd>Adobe Photoshop, After Effects, TradingView Charts</dd>
+            </div>
+          </dl>
         </div>
       </section>
 
       <section id="education" class="education section-pad">
         <div class="section-inner">
-          <div class="panel-header">
-            <span class="panel-index">04</span>
-            <span class="panel-meta">4 entries</span>
-          </div>
           <div class="section-title">
-            <span class="label">Academic</span>
             <h2>Education</h2>
           </div>
 
-          <div class="edu-list">
-            <div class="edu-item">
+          <ol class="edu-list">
+            <li class="edu-item">
               <span class="edu-year">2024</span>
               <div>
                 <h3>Post Graduate Diploma in Big Data Analytics</h3>
                 <h4>Lambton College, Mississauga</h4>
               </div>
-            </div>
-            <div class="edu-item">
+            </li>
+            <li class="edu-item">
               <span class="edu-year">2022</span>
               <div>
                 <h3>Bachelor's Degree in Computer Science</h3>
                 <h4>Coventry University</h4>
                 <p>Thesis: Research on web-based solutions for improving quality of service for tenants and landlords in Nepal.</p>
               </div>
-            </div>
-            <div class="edu-item">
+            </li>
+            <li class="edu-item">
               <span class="edu-year">2018</span>
               <div>
                 <h3>Higher Education Certificate</h3>
                 <h4>Global College of Management</h4>
               </div>
-            </div>
-            <div class="edu-item">
+            </li>
+            <li class="edu-item">
               <span class="edu-year">2016</span>
               <div>
                 <h3>School Leaving Certificate</h3>
                 <h4>Gyanodaya Bal Batika</h4>
               </div>
-            </div>
-          </div>
+            </li>
+          </ol>
         </div>
       </section>
 
       <section id="references" class="references section-pad">
         <div class="section-inner">
-          <div class="panel-header">
-            <span class="panel-index">05</span>
-            <span class="panel-meta">4 quotes</span>
-          </div>
           <div class="section-title">
-            <span class="label">Testimonials</span>
-            <h2>References</h2>
+            <h2>What people say</h2>
           </div>
 
-          <div class="refrence-slider owl-carousel">
-            <div class="single-refrence">
-              <span class="qut">"</span>
-              <p>Saaz has tremendous potential: vocal about his software ideas, but respects his superiors and enthusiastically tackles every assignment. Friendly, easy to get along with, respected by his co-workers.</p>
-              <h3>Bimod Dev Panta</h3>
-              <h4>Owner, Pi Tech Limited</h4>
-            </div>
-            <div class="single-refrence">
-              <span class="qut">"</span>
-              <p>During all the time he has been involved in our company, he has shown great enthusiasm for his work, fulfilling all required responsibilities on time.</p>
-              <h3>Ajay Pant</h3>
-              <h4>Founder, Brandlancer Global</h4>
-            </div>
-            <div class="single-refrence">
-              <span class="qut">"</span>
-              <p>From the start, Saaz was a driving force of innovation which allowed our advertising industry to grow exponentially in just the one year he worked here.</p>
-              <h3>Aakash Sapkota</h3>
-              <h4>CEO, Brandlancer Global</h4>
-            </div>
-            <div class="single-refrence">
-              <span class="qut">"</span>
-              <p>Saaz is one of the most valuable people I have ever met: smart, professional, experienced, deadline-oriented. Highly recommended.</p>
-              <h3>Shirshak Sitaula</h3>
-              <h4>CEO, Syvar Technology</h4>
-            </div>
+          <div class="refs-grid">
+            <figure class="ref">
+              <blockquote>
+                <p>Saaz has tremendous potential: vocal about his software ideas, but respects his superiors and enthusiastically tackles every assignment. Friendly, easy to get along with, respected by his co-workers.</p>
+              </blockquote>
+              <figcaption><strong>Bimod Dev Panta</strong> Owner, Pi Tech Limited</figcaption>
+            </figure>
+            <figure class="ref">
+              <blockquote>
+                <p>During all the time he has been involved in our company, he has shown great enthusiasm for his work, fulfilling all required responsibilities on time.</p>
+              </blockquote>
+              <figcaption><strong>Ajay Pant</strong> Founder, Brandlancer Global</figcaption>
+            </figure>
+            <figure class="ref">
+              <blockquote>
+                <p>From the start, Saaz was a driving force of innovation which allowed our advertising industry to grow exponentially in just the one year he worked here.</p>
+              </blockquote>
+              <figcaption><strong>Aakash Sapkota</strong> CEO, Brandlancer Global</figcaption>
+            </figure>
+            <figure class="ref">
+              <blockquote>
+                <p>Saaz is one of the most valuable people I have ever met: smart, professional, experienced, deadline-oriented. Highly recommended.</p>
+              </blockquote>
+              <figcaption><strong>Shirshak Sitaula</strong> CEO, Syvar Technology</figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
       <section id="contact" class="contact section-pad">
         <div class="section-inner">
-          <div class="panel-header">
-            <span class="panel-index">06</span>
-            <span class="panel-meta">2 channels</span>
-          </div>
-          <div class="section-title">
-            <span class="label">Get in touch</span>
-            <h2>Contact</h2>
-          </div>
-
           <div class="contact-inner">
             <div class="contact-info">
-              <h3>Let's work<br />together.</h3>
-              <p>Open to data analytics roles, full-stack projects, and contract work. Drop a message or email directly.</p>
+              <h2>Let's work together.</h2>
+              <p>Open to data analytics roles, full-stack projects and contract work. Send a message or email directly.</p>
 
               <div class="contact-meta">
                 <span class="contact-email-link">
-                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                  saazinmail@gmail.com
-                  <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
+                  <a href="mailto:saazinmail@gmail.com">saazinmail@gmail.com</a>
+                  <button type="button" class="copy-email-btn" id="copyEmailBtn" aria-label="Copy email address">
                     <i class="fa-regular fa-copy" aria-hidden="true"></i>
                   </button>
                 </span>
-                <a href="https://github.com/SaazNeupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="contact-social-link">
-                  <i class="fa-brands fa-github" aria-hidden="true"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/SaazNeupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="contact-social-link">
-                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                </a>
+                <span class="contact-social">
+                  <a href="https://github.com/SaazNeupane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/SaazNeupane/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </span>
               </div>
             </div>
 
-            <form class="contact-form" id="contactForm">
-              <label for="subject" class="sr-only">Subject</label>
-              <input type="text" id="subject" placeholder="Subject" />
+            <form class="contact-form" id="contactForm" novalidate>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" />
 
-              <label for="body" class="sr-only">Message</label>
-              <textarea id="body" placeholder="Message"></textarea>
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
 
-              <button type="submit" class="btn btn-primary">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" autocomplete="off" required />
+
+              <label for="body">Message</label>
+              <textarea id="body" name="body" rows="5" required></textarea>
+
+              <input type="text" name="website" id="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+              <button type="submit" class="btn btn-primary" id="sendBtn">
                 Send message <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </button>
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </form>
           </div>
         </div>
@@ -475,17 +577,12 @@
     </main>
 
     <footer class="site-footer">
-      <div class="section-inner text-center">
-        <p>Designed &amp; built by Saaz Neupane <i class="fa-solid fa-heart" aria-hidden="true"></i></p>
+      <div class="section-inner footer-inner">
+        <p>Designed &amp; built by Saaz Neupane. A variant from Earth-199999.</p>
+        <a href="#hero" id="backToTop">Back to top <i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
       </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Back to top">
-      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
-    </button>
-
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
