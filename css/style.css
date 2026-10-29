@@ -303,6 +303,12 @@ a.project-card:hover h3 > i { color: var(--accent); transform: translate(3px, -3
 .live-link:hover i { transform: translate(2px, -2px); }
 .live-note { display: block; margin-bottom: var(--s2); font-size: var(--t-sm); color: var(--accent); font-weight: 700; }
 .sys-more { margin-top: var(--s3); }
+.sys-more + .sys-more { margin-top: var(--s4); }
+.sys-more li strong { color: var(--text); font-weight: 700; }
+.sys-what li { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: var(--s3); }
+.sys-what small { font-size: var(--t-sm); color: var(--muted); }
+.sys-what em { font-style: normal; font-size: var(--t-sm); color: var(--gold); }
+.sys-what span { flex-basis: 100%; }
 .sys-more summary { display: inline-flex; align-items: center; gap: var(--s2); cursor: pointer; font-weight: 700; font-size: var(--t-sm); color: var(--accent); list-style: none; }
 .sys-more summary::-webkit-details-marker { display: none; }
 .sys-more summary::before { content: '+'; display: inline-grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--accent); border-radius: 50%; line-height: 1; }

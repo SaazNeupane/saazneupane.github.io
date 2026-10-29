@@ -197,8 +197,19 @@
             <li class="sys-row">
               <span class="sys-n">02</span>
               <div class="sys-main">
-                <h3>YouTube content pipelines</h3>
-                <p>Automated video production. A topic or source goes in, and a finished vertical or long-form video comes out and uploads on a schedule with no manual steps.</p>
+                <h3>Automated content pipelines</h3>
+                <p>Automated content production. A topic or source goes in, and a finished video or post comes out and publishes on a schedule with no manual steps.</p>
+                <details class="sys-more">
+                  <summary>What it is</summary>
+                  <ul class="sys-what">
+                    <li><strong>Gaming clips</strong><em>YouTube</em><span>Clips Twitch streams and CC-licensed YouTube videos for Roblox, Minecraft and Valorant, cuts them vertical, credits the creator.</span></li>
+                    <li><strong>Public-domain films</strong><em>YouTube</em><span>Short scenes from old films that are out of copyright.</span></li>
+                    <li><strong>True crime</strong><em>YouTube · TikTok</em><span>An unsolved case becomes a long video plus Shorts.</span></li>
+                    <li><strong>Animated explainers</strong><em>YouTube · Facebook</em><span>A daily Short on how people think.</span></li>
+                    <li><strong>Music</strong><em>YouTube</em><span>AI-assisted songs, weekly compilations.</span></li>
+                    <li><strong>AI news on X</strong><span>Two sourced posts a day, checked before posting.</span></li>
+                  </ul>
+                </details>
                 <details class="sys-more">
                   <summary>How it works</summary>
                   <ul>
@@ -279,57 +290,6 @@
                 </details>
               </div>
               <ul class="project-tags"><li>Python</li><li>PostgreSQL</li><li>Docker</li><li>Scrapers</li></ul>
-            </li>
-            <li class="sys-row">
-              <span class="sys-n">07</span>
-              <div class="sys-main">
-                <h3>True crime channel</h3>
-                <p>A weekly unsolved case goes in, and a long video plus a series of vertical Shorts comes out, uploaded on a schedule.</p>
-                <details class="sys-more">
-                  <summary>How it works</summary>
-                  <ul>
-                    <li>It picks a case from Wikipedia's unsolved lists using fixed rules: old enough, no minors, no living or prominent suspect, nothing sensitive. Code checks the script first, then a second model audits it.</li>
-                    <li>It writes the script, makes one illustration per paragraph, records the voice, renders with FFmpeg and uploads with an AI disclosure. A video costs about 50 cents.</li>
-                    <li>The visuals are an evidence board with cards, red string and camera moves, rendered in a headless browser in short chunks so memory stays under control. If any step fails, it falls back to the older pan-and-zoom look and emails me once.</li>
-                    <li>Shorts go out at most twice a day, and a new case waits until the last one's Shorts are done. Each Short is also posted to TikTok through browser automation, which re-reads the caption afterwards and stops itself if it can't confirm the post.</li>
-                  </ul>
-                </details>
-              </div>
-              <ul class="project-tags"><li>Python</li><li>FFmpeg</li><li>Headless Chromium</li><li>LLM</li></ul>
-            </li>
-            <li class="sys-row">
-              <span class="sys-n">08</span>
-              <div class="sys-main">
-                <h3>Animated explainer Shorts</h3>
-                <p>A daily series that explains one idea about how people think and decide, in one of four hand-drawn animation styles.</p>
-                <details class="sys-more">
-                  <summary>How it works</summary>
-                  <ul>
-                    <li>Twice a day it takes the next topic, picks a style different from the last video, researches it, writes the script and records the voice.</li>
-                    <li>A quality gate rejects scripts with banned phrasing or stock AI wording. A topic that fails twice is skipped from then on, so one bad topic never blocks the queue.</li>
-                    <li>It renders the animation frames, publishes to YouTube, then posts a Facebook Reel and finds its link by matching the title.</li>
-                    <li>Each run reports a heartbeat, and a check warns before the Facebook token runs out.</li>
-                  </ul>
-                </details>
-              </div>
-              <ul class="project-tags"><li>Python</li><li>JavaScript</li><li>FFmpeg</li><li>YouTube API</li><li>Facebook API</li></ul>
-            </li>
-            <li class="sys-row">
-              <span class="sys-n">09</span>
-              <div class="sys-main">
-                <h3>AI news account on X</h3>
-                <p>An automated account that drafts and posts two short AI news posts a day with a source reply.</p>
-                <details class="sys-more">
-                  <summary>How it works</summary>
-                  <ul>
-                    <li>It drives a real Chromium browser through the DevTools protocol instead of the X API, on a virtual display on the server.</li>
-                    <li>A morning job reads news feeds, picks stories a non-programmer would follow, and has a model write each post. Code then checks that every number appears in the source and that there are no hashtags, hype or politics, and a second model reads the post cold to see if it makes sense.</li>
-                    <li>After posting, it reads the profile back to confirm the post is live. If it can't, it stops itself until I check. A pause file switches everything off.</li>
-                    <li>It drafts replies to big AI accounts too, but never sends them. I approve each one on a dashboard.</li>
-                  </ul>
-                </details>
-              </div>
-              <ul class="project-tags"><li>Python</li><li>Chrome DevTools</li><li>LLM</li><li>Cron</li></ul>
             </li>
           </ol>
         </div>

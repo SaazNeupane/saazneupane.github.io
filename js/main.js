@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var rail = document.getElementById("projectsRail");
   function railStep(dir) {
     var card = rail.querySelector(".project-card");
+    if (!card) return;
     rail.scrollBy({ left: dir * (card.offsetWidth + 32), behavior: reduceMotion ? "auto" : "smooth" });
   }
   if (rail) {
@@ -104,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var pointer = { x: -999, y: -999 };
     var tipEl = document.getElementById("heroTip"), tipDot = null, lastTip = "";
     var labelEl = document.getElementById("universeLabel");
-    var MUTED = [128, 160, 140], GOLD = [226, 177, 60], HOT = [53, 201, 123];
+    var MUTED = [128, 160, 140], MUTED_RGB = "rgb(128,160,140)", GOLD = [226, 177, 60], HOT = [53, 201, 123];
     var loomScale = function () { return innerWidth < 680 ? 0.42 : 0.55; };
     var node = { x: 0, y: 0 }, loomDot = { depth: 0, loom: true };
 
@@ -173,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       var total = 0;
       segs.forEach(function (s) { total += s.len; });
-      var budget = small ? 700 : 1900;
+      var budget = small ? 600 : 1400;
       var step = Math.max(6, total / budget);
       var targets = [];
       segs.forEach(function (s) {
@@ -255,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else { d.ox *= 0.88; d.oy *= 0.88; }
 
         var k = (d.hot || d.gold) ? e : 0, to = d.gold ? GOLD : HOT;
-        ctx.fillStyle = "rgb(" + Math.round(MUTED[0] + (to[0] - MUTED[0]) * k) + "," +
+        ctx.fillStyle = k === 0 ? MUTED_RGB : "rgb(" + Math.round(MUTED[0] + (to[0] - MUTED[0]) * k) + "," +
                                  Math.round(MUTED[1] + (to[1] - MUTED[1]) * k) + "," +
                                  Math.round(MUTED[2] + (to[2] - MUTED[2]) * k) + ")";
         var shimmer = (d.hot || d.gold) && !d.free ? 0.15 * Math.sin(now / 400 + d.ph) : 0;
@@ -419,10 +420,14 @@ document.addEventListener("DOMContentLoaded", function () {
   if (copyBtn) {
     copyBtn.addEventListener("click", function () {
       var icon = copyBtn.querySelector("i");
-      if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(function () {
-        if (icon) icon.className = "fa-solid fa-check";
+      var flash = function (cls) {
+        if (icon) icon.className = cls;
         setTimeout(function () { if (icon) icon.className = "fa-regular fa-copy"; }, 2000);
-      });
+      };
+      if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(
+        function () { flash("fa-solid fa-check"); },
+        function () { flash("fa-solid fa-xmark"); window.prompt("Copy this email address:", EMAIL); }
+      );
     });
   }
 });
