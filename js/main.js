@@ -17,6 +17,32 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* -- In-page links scroll without adding #section to the address -- */
+  function goToSection(id) {
+    var target = document.getElementById(id);
+    if (!target) return false;
+    target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+    return true;
+  }
+
+  document.addEventListener("click", function (e) {
+    var link = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!link || link.getAttribute("href").length < 2) return;
+    if (goToSection(link.getAttribute("href").slice(1))) e.preventDefault();
+  });
+
+  function consumeHash() {          // a /#section address: scroll there, then clean the address
+    if (location.hash.length < 2) return;
+    var id = decodeURIComponent(location.hash.slice(1));
+    history.replaceState(null, "", location.pathname + location.search);
+    goToSection(id);
+  }
+  window.addEventListener("hashchange", consumeHash);
+  if (document.readyState === "complete") consumeHash();
+  else window.addEventListener("load", consumeHash);
+
   /* -- Active nav highlight -- */
   var navLinks = document.querySelectorAll(".nav-links a:not(.nav-cta)");
   if ("IntersectionObserver" in window && navLinks.length) {
