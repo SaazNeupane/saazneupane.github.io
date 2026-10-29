@@ -186,8 +186,8 @@
                   <ul>
                     <li>It's a repurposed gaming laptop running Ubuntu Server, with a GPU for local AI models and a fixed LAN address. Tailscale handles remote access.</li>
                     <li>Pi-hole is the network's DNS and DHCP server. A reverse proxy gives each service a local name, and a Cloudflare Tunnel exposes only the few apps that need to be public.</li>
-                    <li>Nextcloud syncs phone photos, Vaultwarden stores passwords, Samba shares files with Windows, and a Homepage dashboard links it all together.</li>
-                    <li>Uptime Kuma watches about twenty services and gets a heartbeat from every cron job, so a job that quietly stops raises an alert.</li>
+                    <li>Immich stores phone photos, Vaultwarden stores passwords, Samba shares files with Windows, and a Homepage dashboard links it all together.</li>
+                    <li>Uptime Kuma runs about two dozen monitors and gets a heartbeat from every cron job, so a job that quietly stops raises an alert.</li>
                     <li>Every project repo has a deploy cron that pulls from GitHub every five minutes. A watchdog alerts me if one of those cron lines disappears.</li>
                   </ul>
                 </details>
@@ -203,7 +203,7 @@
                   <summary>How it works</summary>
                   <ul>
                     <li>Each pipeline runs end to end on a schedule. It picks a topic or source, writes the script or finds the best moments, adds voice, captions and footage, renders with FFmpeg and uploads through the YouTube API.</li>
-                    <li>A local language model writes the cheap first draft, then Claude polishes it, ranks options and writes titles, so most of the work costs nothing. One helper tries the cheaper provider first and falls back to the other.</li>
+                    <li>Every text call goes through one shared helper that reads a routing file, so switching between hosted models and a local Ollama model is a one-line change. Small shared libraries also handle media jobs, FFmpeg and YouTube uploads for every pipeline, so a fix lands everywhere at once.</li>
                     <li>Clips only come from a verified permission list or public-domain material. New candidates are flagged for manual review instead of being added automatically.</li>
                     <li>Every video passes a content-quality check before upload, and the description discloses AI use.</li>
                     <li>A shared GPU lock keeps pipelines from colliding. Upload slots are claimed in a state file so two runs never publish at the same second. Every run sends a heartbeat, so a silent failure raises an alert.</li>
@@ -221,7 +221,7 @@
                 <details class="sys-more">
                   <summary>How it works</summary>
                   <ul>
-                    <li>You can ask it how the disk is doing or whether last night's pipeline ran. A local model calls tools for disk, containers, DNS stats, monitors, pipeline logs and incident history.</li>
+                    <li>You can ask it how the disk is doing, whether last night's pipeline ran, or to find a photo by describing it. A local model calls tools for disk, containers, DNS stats, monitors, pipeline logs, incident history and photo search.</li>
                     <li>A background monitor restarts containers that go down and guards against memory leaks. It also watches deploys, the tunnel, the GPU, disk space and cron lines.</li>
                     <li>It emails a daily digest of incidents and each pipeline's last run, and flags any pipeline whose uploads suddenly drop to zero.</li>
                     <li>Tools are plain Python functions with a schema, so adding one takes a few lines and a self-check.</li>
@@ -279,6 +279,57 @@
                 </details>
               </div>
               <ul class="project-tags"><li>Python</li><li>PostgreSQL</li><li>Docker</li><li>Scrapers</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">07</span>
+              <div class="sys-main">
+                <h3>True crime channel</h3>
+                <p>A weekly unsolved case goes in, and a long video plus a series of vertical Shorts comes out, uploaded on a schedule.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>It picks a case from Wikipedia's unsolved lists using fixed rules: old enough, no minors, no living or prominent suspect, nothing sensitive. Code checks the script first, then a second model audits it.</li>
+                    <li>It writes the script, makes one illustration per paragraph, records the voice, renders with FFmpeg and uploads with an AI disclosure. A video costs about 50 cents.</li>
+                    <li>The visuals are an evidence board with cards, red string and camera moves, rendered in a headless browser in short chunks so memory stays under control. If any step fails, it falls back to the older pan-and-zoom look and emails me once.</li>
+                    <li>Shorts go out at most twice a day, and a new case waits until the last one's Shorts are done. Each Short is also posted to TikTok through browser automation, which re-reads the caption afterwards and stops itself if it can't confirm the post.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>FFmpeg</li><li>Headless Chromium</li><li>LLM</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">08</span>
+              <div class="sys-main">
+                <h3>Animated explainer Shorts</h3>
+                <p>A daily series that explains one idea about how people think and decide, in one of four hand-drawn animation styles.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>Twice a day it takes the next topic, picks a style different from the last video, researches it, writes the script and records the voice.</li>
+                    <li>A quality gate rejects scripts with banned phrasing or stock AI wording. A topic that fails twice is skipped from then on, so one bad topic never blocks the queue.</li>
+                    <li>It renders the animation frames, publishes to YouTube, then posts a Facebook Reel and finds its link by matching the title.</li>
+                    <li>Each run reports a heartbeat, and a check warns before the Facebook token runs out.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>JavaScript</li><li>FFmpeg</li><li>YouTube API</li><li>Facebook API</li></ul>
+            </li>
+            <li class="sys-row">
+              <span class="sys-n">09</span>
+              <div class="sys-main">
+                <h3>AI news account on X</h3>
+                <p>An automated account that drafts and posts two short AI news posts a day with a source reply.</p>
+                <details class="sys-more">
+                  <summary>How it works</summary>
+                  <ul>
+                    <li>It drives a real Chromium browser through the DevTools protocol instead of the X API, on a virtual display on the server.</li>
+                    <li>A morning job reads news feeds, picks stories a non-programmer would follow, and has a model write each post. Code then checks that every number appears in the source and that there are no hashtags, hype or politics, and a second model reads the post cold to see if it makes sense.</li>
+                    <li>After posting, it reads the profile back to confirm the post is live. If it can't, it stops itself until I check. A pause file switches everything off.</li>
+                    <li>It drafts replies to big AI accounts too, but never sends them. I approve each one on a dashboard.</li>
+                  </ul>
+                </details>
+              </div>
+              <ul class="project-tags"><li>Python</li><li>Chrome DevTools</li><li>LLM</li><li>Cron</li></ul>
             </li>
           </ol>
         </div>
@@ -425,7 +476,7 @@
             </div>
             <div class="skill-row">
               <dt>AI &amp; automation</dt>
-              <dd>LLM APIs, Local models (Ollama), Function calling and agents, Speech-to-text (Whisper), FFmpeg, Automated content pipelines</dd>
+              <dd>LLM APIs, Local models (Ollama), Function calling and agents, Speech-to-text (Whisper), FFmpeg, Browser automation (Chrome DevTools), Automated content pipelines</dd>
             </div>
             <div class="skill-row">
               <dt>Frontend</dt>
